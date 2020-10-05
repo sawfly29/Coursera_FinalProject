@@ -78,9 +78,114 @@ body {
     transform: rotateY(360deg);
 }
 
-.front.match{
+.front.match {
     background-color: #5ad66f;
 }
-.front.dismatch{
+
+.front.dismatch {
     background-color: #F44336;
+}
+
+.timer {
+    font-size: 32px;
+    margin-top: 30px;
+    line-height: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434344;
+}
+
+.winner,
+.loser {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.winner.active,
+.loser.active {
+    display: unset;
+    position: absolute;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.window {
+    display: inline-flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+    padding: 30px 0px;
+}
+
+.sign {
+    color: #434344;
+    font-size: 48px;
+}
+
+button {
+    height: 40px;
+    display: inline-block;
+    color: white;
+    padding: 0 30px;
+    margin-top: 40px;
+    text-decoration: none;
+    background: linear-gradient(270deg, #22AB93, #19668D);
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+button:active {
+    box-shadow: inset 2px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sign span {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    -webkit-animation: bounce 0.3s ease infinite alternate;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+        0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sign span:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+}
+
+.sign span:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+}
+
+.sign span:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+}
+
+/* ANIMATION */
+@-webkit-keyframes bounce {
+    100% {
+        top: -20px;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+            0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+            0 50px 25px rgba(0, 0, 0, 0.2);
+    }
 }
