@@ -70,12 +70,17 @@ body {
     position: absolute;
 }
 
-.chosen .back {
+.open .back {
     transform: rotateY(180deg);
 }
 
-.chosen .front {
-
+.open .front {
     transform: rotateY(360deg);
 }
 
+.front.match{
+    background-color: #5ad66f;
+}
+.front.dismatch{
+    background-color: #F44336;
+}
